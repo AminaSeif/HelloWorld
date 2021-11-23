@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Basics In Detail</title>
+    <link rel="stylesheet"  href="./style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <img src="C:\Users\MUTABHA 009\Desktop\HelloWorld\pictures\My test image" alt="My test image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg">
+  <h1>A Step-by-step CSS Detailed Description</h1> 
+
+    <p>CSS (Cascading Style Sheets) is a language that allows programmers to 'style' their websites. 
+      It is neither a programming language nor a markup language (for content).</p>
+
+    <p>CSS allows you to manipulate colors and visual effects on your website.
+      Background and text colors, Italicizing, bolding, sizing and a lot of other visual efects are tweaked with CSS. </p>
+
+      <p>CSS can be run on your text editor, same as a HTML file. The extension has to be '.css' for it to work. To create
+        the CSS code extension, follow these steps:
+        <ol>
+          <li>Create a new folder in your HTML code file. Such a new folder is called a 'Directory'</li>
+          <li>(For the purpose of this presentation) Name this new folder 'styles'</li>
+          <li>Under this new folder create a file and name it 'styles.css'</li>
+          <li>Write and Save your CSS code</li>
+        </ol>
+      </p>
+    
+        <h2>Anatomy of the CSS link and How the invoking of CSS codes work </h2>
+        <p>For a CSS code to run and affect a HTML code, it has to be invoked from the HTML code.
+          It will be 'called upon' (invoked) by citing a relationship file; a relationship between the HTML and the CSS 
+          codes.Otherwise the CSS code will not work.</p>
+          
+          <p>A relationship is cited as follows (within angle brackets):
+            link href="style.css" rel="stylesheet",
+            which basically tells the HTML code to proceed running the code it will find in the file 'style.css' 
+            inside the directory 'stylesheet'.
+            </p>
+            <p>Notice that the 'Hyperreference link' ('href') that is used to invoke (call upon) the CSS code is written 
+              within the HTML code, but the actual CSS code will be in a different file, elsewhere</p>
+          
+          Let's dissect the CSS code for red paragraph text to understand how it works. 
+          The whole structure is called a ruleset. (which is often referred to as just rule.)
+        Note the names of the individual parts:
+        <ol>
+          <li>Selector</li>
+          <ul>This is the HTML element name at the start of the ruleset. 
+            It defines the element(s) to be styled (in this example, the elements considered were the paragraphs.). 
+              To style a different element, change the selector.</ul>
+
+          <li>Declaration</li>
+          <ul>This is a single rule like color: red;. It specifies which of the element's properties you want to style.</ul>
+
+          <li>Properties</li>
+          <ul>These are ways in which you can style an HTML element. 
+            (In this example, color is a property of the 'paragraph' elements.) 
+              In CSS, you choose which properties you want to affect in the rule.</ul>
+              
+          <li>Property value</li>
+          <ul>To the right of the property—after the colon—there is the property value. 
+            This chooses one out of many possible appearances for a given property. 
+            (For example, there are many color values in addition to red.)</ul>
+        </ol>
+       
+        <p>Note other important parts of the syntax, and extra functions that can be performed by CSS codes:</p>
+        <ul>
+          <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+          <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+          <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+          <li>To modify multiple property values in one ruleset, write them separated by semicolons, like this:
+            <p> p {
+              <p>color: red;</p>
+              <p>width: 500px;</p>
+              <p>border: 1px solid black;</p>
+                  }</p> 
+          </li>
+          <li>You can also select multiple elements and apply a single ruleset to all of them, Just Separate 
+            multiple selectors by commas. 
+            <p>For example:
+              p, li, h1 {
+                <p>color: red;</p>
+                         }
+          </p>
+            </li>
+          <li>You can also use different types of selectors.
+            <p>In HTML and CSS there are many types of selectors, which can make more specific selections</p>
+            <p>Consider the examples bellow about selectors and what they select</p>
+            <p>
+              <table>
+                <tr>
+                  <th><b>S/N</b></th>
+                  <th><b>Selector name</b></th>
+                  <th><b>What it selects</b></th>
+                    <th><b>Example</b></th>
+                </tr>
+
+                <tr>
+                  <td>1</td>
+                  <td>Element selector (sometimes called a tag or type selector)</td>
+                  <td>All HTML elements of the specified type</td>
+                    <td>If the tag (in angle braces) of 'p' is selected/indicated, the code will select "Paragraphs'</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>ID selector</td>
+                  <td>The element on the page with the specified ID</td>
+                    <td>On a given HTML page, each id value should be unique. 	#my-id
+                      selects (In angle braces)p id="my-id"(End of angle braces) or (In angle braces)a id="my-id"
+                      (End of angle braces)</td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Class selector</td>
+                  <td>The element(s) on the page with the specified class</td>
+                    <td>Multiple instances of the same class can appear on a page. (Class is indicated by "(dot)name-of-class")
+                      For example:	.my-class selects (In angle braces)p class="my-class"(End of angle braces) and 
+                      (In angle braces)a class="my-class"(End of angle braces)
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>Attribute selector</td>
+                  <td>The element(s) on the page with the specified attribute</td>
+                    <td>img[src] selects (In angle braces)img src="myimage.png"(End of angle braces) 
+                      but not (In angle braces)img(End of angle braces)
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Pseudo-class selector</td>
+                  <td>The specified element(s), but only when in the specified state.</td>
+                    <td>(For example, when a cursor hovers over a link.) 	a:hover
+                      selects (In angle braces)a(End of angle braces), but only when the mouse pointer is hovering over 
+                      the link.
+                    </td>
+                </tr>
+              </table>
+            </p>
+          </li>
+        </ul>
+
+  </body>
+</html>
+
